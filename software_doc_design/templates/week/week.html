@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Week</title>
+</head>
+<body>
+<div class="container mt-5">
+
+    <div class="alert alert-info">
+         <h2>Week {{week.pk}}</h2>
+            <h3>Hours: {{week.hours}}</h3>
+            <h3>Name: {{week.name}}</h3>
+            <h3>Description: {{week.description}}</h3>
+            <h3>Videos: {{week.videos}}</h3>
+            <h3>Readings: {{week.readings}}</h3>
+            <h3>Quizzes: {{week.quizzes}}</h3>
+            <br>
+        <a class = "btn btn-danger" href="/week/{{ week.pk }}/delete">Delete</a>
+        <a class = "btn btn-success" href="/week/{{ week.pk }}/update">Update</a>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Coursera</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <h2>Weeks</h2>
+            {% for week in weeks %}
+            <h6>Hours: {{week.hours}}</h6>
+            <h6>Name: {{week.name}}</h6>
+            <h6>Description: {{week.description}}</h6>
+            <h6>Videos: {{week.videos}}</h6>
+            <h6>Readings: {{week.readings}}</h6>
+            <h6>Quizzes: {{week.quizzes}}</h6>
+            <br>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
