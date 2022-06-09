@@ -10,15 +10,81 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-3">
+        <div style="width: 120px;">
             <h2>Weeks</h2>
             {% for week in weeks %}
+            <h6>pk: {{week.pk}}</h6>
             <h6>Hours: {{week.hours}}</h6>
             <h6>Name: {{week.name}}</h6>
             <h6>Description: {{week.description}}</h6>
             <h6>Videos: {{week.videos}}</h6>
             <h6>Readings: {{week.readings}}</h6>
             <h6>Quizzes: {{week.quizzes}}</h6>
+            <br>
+            {% endfor %}
+        </div>
+        <div style="width: 125px;">
+            <h2>Ratings</h2>
+            {% for rating in ratings %}
+            <h6>pk: {{rating.pk}}</h6>
+            <h6>ratings_count: {{rating.ratings_count}}</h6>
+            <h6>rating: {{rating.rating}}</h6>
+            <br>
+            {% endfor %}
+        </div>
+        <div style="width: 150px;">
+            <h2>Syllabuses</h2>
+            {% for s in syllabuses %}
+            <h6>pk: {{s.pk}}</h6>
+            <h6>rating: {{s.rating}}</h6>
+            <h6>week: {{s.week}}</h6>
+            <br>
+            {% endfor %}
+        </div>
+        <div style="width: 165px;">
+            <h2>Instructors</h2>
+            {% for i in instructors %}
+            <h6>pk: {{i.pk}}</h6>
+            <h6>name: {{i.name}}</h6>
+            <h6>bio: {{i.bio}}</h6>
+            <h6>course_ids: {{i.course_ids}}</h6>
+            <h6>social_networks: {{i.social_networks}}</h6>
+            <br>
+            {% endfor %}
+        </div>
+        <div style="width: 160px;">
+            <h2>Comments</h2>
+            {% for s in comments %}
+            <h6>pk: {{s.pk}}</h6>
+            <h6>data: {{s.data}}</h6>
+            <h6>author: {{s.author}}</h6>
+            <h6>comment: {{s.comment}}</h6>
+            <br>
+            {% endfor %}
+        </div>
+        <div style="width: 300px;">
+            <h2>Courses</h2>
+            {% for s in courses %}
+            <h6>pk: {{s.pk}}</h6>
+            <h6>name: {{s.name}}</h6>
+            <h6>faq: {{s.faq}}</h6>
+            <h6>instructor: {{s.instructor}}</h6>
+            <h6>syllabus: {{s.syllabus}}</h6>
+            <h6>rating: {{s.rating}}</h6>
+            <h6>comment: {{s.comment}}</h6>
+            <br>
+            {% endfor %}
+        </div>
+        <div style="width: 300px;">
+            <h2>Specializations</h2>
+            {% for s in specializations %}
+            <h6>pk: {{s.pk}}</h6>
+            <h6>name: {{s.name}}</h6>
+            <h6>how_it_works: {{s.how_it_works}}</h6>
+            <h6>faq: {{s.faq}}</h6>
+            <h6>course: {{s.course}}</h6>
+            <h6>instructor_pk: {{s.instructor}}</h6>
+            <h6>rating: {{s.rating}}</h6>
             <br>
             {% endfor %}
         </div>

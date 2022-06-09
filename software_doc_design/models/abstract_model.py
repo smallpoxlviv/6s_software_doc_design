@@ -1,3 +1,4 @@
+import json
 from abc import abstractmethod
 
 from ..db import Base, session
@@ -11,6 +12,12 @@ class AbstractModel(Base):
             self._init_from_list(data_list)
         elif data:
             self._init_from_dict(data)
+
+    def __str__(self):
+        result = '\n'
+        for key, value in self.json().items():
+            result = result + f'{key}: {value}\n'
+        return result
 
     @abstractmethod
     def _init_from_list(self, data: list):

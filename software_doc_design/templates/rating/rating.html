@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating</title>
+</head>
+<body>
+<div class="container mt-5">
+
+    <div class="alert alert-info">
+         <h2>Rating {{rating.pk}}</h2>
+            <h3>ratings_count: {{week.ratings_count}}</h3>
+            <h3>ratings_count: {{week.rating}}</h3>
+            <br>
+        <a class = "btn btn-danger" href="/rating/{{ rating.pk }}/delete">Delete</a>
+        <a class = "btn btn-success" href="/rating/{{ rating.pk }}/update">Update</a>
+    </div>
+
+</div>
+</body>
+</html>

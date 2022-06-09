@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Syllabus</title>
+</head>
+<body>
+<div class="container mt-5">
+
+    <div class="alert alert-info">
+         <h2>Syllabus {{syllabus.pk}}</h2>
+            <h3>rating_pk: {{syllabus.rating_pk}}</h3>
+            <h3>week_pk: {{syllabus.week_pk}}</h3>
+            <br>
+        <a class = "btn btn-danger" href="/syllabus/{{ syllabus.pk }}/delete">Delete</a>
+        <a class = "btn btn-success" href="/syllabus/{{ syllabus.pk }}/update">Update</a>
+    </div>
+
+</div>
+</body>
+</html>
