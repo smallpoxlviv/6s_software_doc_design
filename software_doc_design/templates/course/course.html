@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course</title>
+</head>
+<body>
+<div class="container mt-5">
+
+    <div class="alert alert-info">
+         <h2>Course {{course.pk}}</h2>
+            <h3>name: {{course.name}}</h3>
+            <h3>faq: {{course.faq}}</h3>
+            <h3>instructor: {{course.instructor}}</h3>
+            <h3>syllabus: {{course.syllabus}}</h3>
+            <h3>rating: {{course.rating}}</h3>
+            <h3>comment: {{course.comment}}</h3>
+            <br>
+        <a class = "btn btn-danger" href="/course/{{ course.pk }}/delete">Delete</a>
+        <a class = "btn btn-success" href="/course/{{ course.pk }}/update">Update</a>
+    </div>
+
+</div>
+</body>
+</html>

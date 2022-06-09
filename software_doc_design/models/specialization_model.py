@@ -48,4 +48,7 @@ class SpecializationModel(AbstractModel):
             'course': self.course,
             'instructor': self.instructor,
             'rating': self.rating,
+            'course_pk': self.course_pk,
+            'instructor_pk': self.instructor_pk,
+            'rating_pk': self.rating_pk,
         }

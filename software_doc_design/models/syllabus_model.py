@@ -28,4 +28,6 @@ class SyllabusModel(AbstractModel):
             'pk': self.pk,
             'rating': self.rating,
             'week': self.week,
+            'rating_pk': self.rating_pk,
+            'week_pk': self.week_pk,
         }

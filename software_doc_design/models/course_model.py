@@ -50,4 +50,8 @@ class CourseModel(AbstractModel):
             'syllabus': self.syllabus,
             'rating': self.rating,
             'comment': self.comment,
+            'instructor_pk': self.instructor_pk,
+            'syllabus_pk': self.syllabus_pk,
+            'rating_pk': self.rating_pk,
+            'comment_pk': self.comment_pk,
         }

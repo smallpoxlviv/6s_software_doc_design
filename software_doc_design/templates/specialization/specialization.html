@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specialization</title>
+</head>
+<body>
+<div class="container mt-5">
+
+    <div class="alert alert-info">
+         <h2>Specialization {{specialization.pk}}</h2>
+            <h3>name: {{specialization.name}}</h3>
+            <h3>how_it_works: {{specialization.how_it_works}}</h3>
+            <h3>faq: {{specialization.faq}}</h3>
+            <h3>course: {{specialization.course}}</h3>
+            <h3>instructor: {{specialization.instructor}}</h3>
+            <h3>rating: {{specialization.rating}}</h3>
+            <br>
+        <a class = "btn btn-danger" href="/specialization/{{ specialization.pk }}/delete">Delete</a>
+        <a class = "btn btn-success" href="/specialization/{{ specialization.pk }}/update">Update</a>
+    </div>
+
+</div>
+</body>
+</html>

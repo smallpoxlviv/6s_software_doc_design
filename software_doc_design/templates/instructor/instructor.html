@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating</title>
+</head>
+<body>
+<div class="container mt-5">
+
+    <div class="alert alert-info">
+         <h2>Instructor {{instructor.pk}}</h2>
+            <h3>name: {{instructor.name}}</h3>
+            <h3>bio: {{instructor.bio}}</h3>
+            <h3>course_ids: {{instructor.course_ids}}</h3>
+            <h3>social_networks: {{instructor.social_networks}}</h3>
+            <br>
+        <a class = "btn btn-danger" href="/instructor/{{ instructor.pk }}/delete">Delete</a>
+        <a class = "btn btn-success" href="/instructor/{{ instructor.pk }}/update">Update</a>
+    </div>
+
+</div>
+</body>
+</html>

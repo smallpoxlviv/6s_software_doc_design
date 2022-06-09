@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment</title>
+</head>
+<body>
+<div class="container mt-5">
+
+    <div class="alert alert-info">
+         <h2>Comment {{comment.pk}}</h2>
+            <h3>data: {{comment.data}}</h3>
+            <h3>author: {{comment.author}}</h3>
+            <h3>comment: {{comment.comment}}</h3>
+            <br>
+        <a class = "btn btn-danger" href="/comment/{{ comment.pk }}/delete">Delete</a>
+        <a class = "btn btn-success" href="/comment/{{ comment.pk }}/update">Update</a>
+    </div>
+
+</div>
+</body>
+</html>

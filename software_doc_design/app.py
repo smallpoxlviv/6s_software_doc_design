@@ -150,32 +150,90 @@ def delete_instructor(pk):
 
 
 
-@app.route("/rating/<int:pk>", methods=["GET"])
-def get_rating(pk):
-    rating = CommentController.get(pk)
-    return render_template("rating/rating.html", rating=rating)
+@app.route("/comment/<int:pk>", methods=["GET"])
+def get_comment(pk):
+    comment = CommentController.get(pk)
+    return render_template("comment/comment.html", comment=comment)
 
 
-@app.route('/rating', methods=['POST', 'GET'])
-def create_rating():
+@app.route('/comment', methods=['POST', 'GET'])
+def create_comment():
     if request.method == "POST":
         return CommentController.post(request.form)
     else:
-        return render_template("rating/rating_create.html")
+        return render_template("comment/comment_create.html")
 
 
-@app.route("/rating/<int:pk>/update", methods=["POST", "GET"])
-def update_rating(pk):
+@app.route("/comment/<int:pk>/update", methods=["POST", "GET"])
+def update_comment(pk):
     if request.method == "POST":
         return CommentController.put(pk, request.form)
     else:
-        rating = CommentController.get(pk)
-        return render_template("rating/rating_update.html", rating=rating)
+        comment = CommentController.get(pk)
+        return render_template("comment/comment_update.html", comment=comment)
 
 
-@app.route("/rating/<int:pk>/delete")
-def delete_rating(pk):
+@app.route("/comment/<int:pk>/delete")
+def delete_comment(pk):
     return CommentController.delete(pk)
+
+
+@app.route("/course/<int:pk>", methods=["GET"])
+def get_course(pk):
+    course = CourseController.get(pk)
+    return render_template("course/course.html", course=course)
+
+
+@app.route('/course', methods=['POST', 'GET'])
+def create_course():
+    if request.method == "POST":
+        return CourseController.post(request.form)
+    else:
+        return render_template("course/course_create.html")
+
+
+@app.route("/course/<int:pk>/update", methods=["POST", "GET"])
+def update_course(pk):
+    if request.method == "POST":
+        return CourseController.put(pk, request.form)
+    else:
+        course = CourseController.get(pk)
+        return render_template("course/course_update.html", course=course)
+
+
+@app.route("/course/<int:pk>/delete")
+def delete_course(pk):
+    return CourseController.delete(pk)
+
+
+@app.route("/specialization/<int:pk>", methods=["GET"])
+def get_specialization(pk):
+    specialization = SpecializationController.get(pk)
+    return render_template("specialization/specialization.html", specialization=specialization)
+
+
+@app.route('/specialization', methods=['POST', 'GET'])
+def create_specialization():
+    if request.method == "POST":
+        return SpecializationController.post(request.form)
+    else:
+        return render_template("specialization/specialization_create.html")
+
+
+@app.route("/specialization/<int:pk>/update", methods=["POST", "GET"])
+def update_specialization(pk):
+    if request.method == "POST":
+        return SpecializationController.put(pk, request.form)
+    else:
+        specialization = SpecializationController.get(pk)
+        print(specialization)
+
+        return render_template("specialization/specialization_update.html", specialization=specialization)
+
+
+@app.route("/specialization/<int:pk>/delete")
+def delete_specialization(pk):
+    return SpecializationController.delete(pk)
 
 
 if __name__ == '__main__':
